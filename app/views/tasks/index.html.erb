@@ -1,0 +1,7 @@
+<h1>Tasks Manager</h1>
+<ul>
+  <p><% @tasks.each do |task| %></p>
+  <li><%= link_to task.title, "tasks/#{task.id}" %><%= link_to "Delete", task_path(task), method: :delete %></li>
+  <% end %>
+  <p><%= link_to 'Add new task', new_path %></p>
+</ul>
